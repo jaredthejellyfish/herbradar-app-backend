@@ -47,7 +47,10 @@ router.get("/auth/token", async (c) => {
 });
 
 router.on(["POST", "GET"], "/auth/*", (c) => {
-  return auth.handler(c.req.raw);
+  const request = new Request(c.req.raw, {
+    headers: new Headers(c.req.raw.headers),
+  });
+  return auth.handler(request);
 });
 
 export default router;

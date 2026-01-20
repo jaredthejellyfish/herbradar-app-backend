@@ -1,6 +1,6 @@
 import { Hono } from 'hono';
 
-import type { AuthType } from '@/lib/auth';
+import type { AuthType } from '../../lib/auth';
 
 import auth from './routes/auth';
 

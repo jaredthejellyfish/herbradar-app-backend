@@ -1,7 +1,13 @@
 {
   "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "strict": true,
-    "module": "nodenext",
+    "skipLibCheck": true,
+    "lib": [
+      "ESNext"
+    ],
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx",
     "baseUrl": ".",
@@ -9,7 +15,8 @@
       "@/*": ["./src/*"],
       "@/lib/*": ["../lib/*"],
       "@/constants/*": ["../constants/*"],
-      "@lib/*": ["../lib/*"]
+      "@lib/*": ["../../lib/*"]
     }
-  }
+
+  },
 }

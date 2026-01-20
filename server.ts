@@ -6,6 +6,7 @@ if (import.meta.main) {
 
   Bun.serve({
     port,
+    hostname: "0.0.0.0",
     fetch: app.fetch,
   });
 }
